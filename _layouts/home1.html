@@ -1,0 +1,25 @@
+---
+layout: archive
+---
+
+{{ content }}
+<font size=3>
+<div style="line-height:1.3em">
+한국에서 경영학을 공부하다가 이 길은 내 길이 아님을 뉘우치고, 영화 소셜 네트워크를 감명 깊게 본 뒤 
+“코리안 주커버그가 있다면 그건 바로 내가 아닐까?” 라는 잘못된 생각으로 컴퓨터공학을 공부하였습니다. 
+지금은 토론토대학에서 석사과정을 밟고 있습니다. 
+틈틈히 일상을 기록하고 있으며, 유학을 생각하는 분들께 조금이나마 필요한 정보가 되었으면 좋겠습니다.  
+</font>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}

@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "Main"
+    url: /
+  - title: "Blogs(한글)"
+    url: /blogs/
+
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
