@@ -11,7 +11,7 @@ layout: archive
 틈틈히 일상을 기록하고 있으며, 유학을 생각하는 분들께 조금이나마 필요한 정보가 되었으면 좋겠습니다.  
 </font>
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
+<font size=5>
 {% if paginator %}
   {% assign posts = paginator.posts %}
 {% else %}
@@ -23,3 +23,4 @@ layout: archive
 {% endfor %}
 
 {% include paginator.html %}
+</font>
