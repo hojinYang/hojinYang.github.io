@@ -22,7 +22,7 @@ ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추
 |2017|Como, Italy|XING|Job|
 |2013|Hong Kong|Yelp|Business|
 
- 대회 진행 방식은 Kaggle과 유사하며 RecSys Challenge에서는 비교적 더 큰 데이터셋을 다루게 된다. 토론이 활발히 이루어지는 kaggle과는 달리 팀들간 교류가 거의 발생하지 않는다는 점도 특징이다. 대략 2월 말 주제와 데이터셋이 공개된 뒤 약 3개월간 대회가 진행되는데, 매년 가을 ACM RecSys와 함께 개최되는 Workshop에서 상위권 팀들의 솔루션을 확인할 수 있다. 개인적으로는 학부연구생을 하던 2018년, 인턴쉽을 하고 있는 2020년에 각각 팀장과 팀 멤버로 참가하였고 두 대회 모두 2위로 마무리하였다. 아래에 두 대회에 대한 설명과 팀이 사용했던 모델들을 간단히 정리해 보았다.
+ 대회 진행 방식은 Kaggle과 유사하며 RecSys Challenge에서는 비교적 더 큰 데이터셋을 다루게 된다. 토론이 활발히 이루어지는 kaggle과는 달리 팀간 교류가 거의 발생하지 않는다는 점도 특징이다. 대략 2월 말 주제와 데이터셋이 공개된 뒤 약 3개월간 대회가 진행되는데, 매년 가을 ACM RecSys와 함께 개최되는 Workshop에서 상위권 팀들의 솔루션을 확인할 수 있다. 개인적으로는 학부연구생을 하던 2018년, 인턴쉽을 하고 있는 2020년에 각각 팀장과 팀 멤버로 참가하였고 두 대회 모두 2위로 마무리하였다. 아래에 두 대회에 대한 설명과 팀이 사용했던 모델들을 간단히 정리해 보았다.
 
 ##  Spotify RecSys Challenge 2018: Automatic Playlist Continuation
 ### 개요
@@ -74,7 +74,7 @@ Playlist와 song을 각각 user와 item에 대응시켜 CF를 모델링하였다
 
 - User History Embedding
 
-추천 모델에서 유저(아이템) 임베딩을 학습할 때는 주로 [Neural CF(NCF)](https://arxiv.org/pdf/1708.05031.pdf)) 방식을 사용한다. 그러나 이번 대회는 training/test set에 등장하는 negative sample이 모두 유저의 follower 그래프에서 추출되었고, 단순히 사용자간 거리를 임베딩하는 NCF 방식으로는 해당 트윗 engagement 여부를 판단하는데 충분한 정보를 주지 못했다. 그보다는 유저가 어떤 트윗 내용에 반응했는지가 target predcition에 더 중요한 요소로 판단하였다. target tweet을 기준으로 유저가 engage한 트윗들의 attention score를 계산하였고 이를 통해 얻은 user history embedding을 feed-forward의 입력 중 하나로 사용하였다.
+추천 모델에서 유저(아이템) 임베딩을 학습할 때는 주로 [Neural CF(NCF)](https://arxiv.org/pdf/1708.05031.pdf) 방식을 사용한다. 그러나 이번 대회는 training/test set에 등장하는 negative sample이 모두 유저의 follower 그래프에서 추출되었고, 단순히 사용자간 거리를 임베딩하는 NCF 방식으로는 해당 트윗 engagement 여부를 판단하는데 충분한 정보를 주지 못했다. 그보다는 유저가 어떤 트윗 내용에 반응했는지가 target predcition에 더 중요한 요소로 판단하였다. target tweet을 기준으로 유저가 engage한 트윗들의 attention score를 계산하였고 이를 통해 얻은 user history embedding을 feed-forward의 입력 중 하나로 사용하였다.
 
 #### 우승팀
 
