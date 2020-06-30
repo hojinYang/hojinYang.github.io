@@ -9,6 +9,7 @@ comments: true
 
 추천시스템은 Applied ML 의 주요 분야로서 학계와 현업에서 활발한 연구가 진행되고 있다. 개인적으로 추천 분야에 흥미를 느끼고 데이터마이닝 랩에서 학부참여 연구를 하던 시절, 교수님의 소개로 RecSys Challenge에 대해 알게 되었다. 그 뒤로 두 번의 challenge에 참여해 보았는데, 이번 글에서는 대회 소개와 사용했던 모델, 그리고 참가 후기를 간단히 정리해 보았다.
 
+![challenge logo](https://hojinYang.github.io/img/recsysc.png){:.aligncenter}
 
 ##  RecSys Challenge
 ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추천시스템 문제를 다루는 대회이며, 이 분야 최고 권위의 학회 중 하나인 [ACM RecSys](https://recsys.acm.org/)에서 매년 개최한다. 추천시스템 분야를 연구하는 전세계 대학뿐만 아니라 많은 기업이 참여해 자신들의 추천 모델을 검증해 보는데, 이전 대회 우승팀으로는 중국의 Alibaba(’16), 러시아의 Yandex('15), NVidia의 Rapids AI(’20)등이 있다. 높은 컴퓨팅파워와 데이터 파이프라인을 보유하고 있는 기업팀이 상위권을 차지하지만, 추천 분야를 연구하는 나와 같은 학생들도 대회를 통해 글로벌 Tech 기업의 데이터를 다뤄보며 현업의 문제들을 직접 해결해보는 기회를 얻을 수 있다.  
@@ -22,9 +23,6 @@ ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추
 |2013|Hong Kong|Yelp|Business|
 
  대회 진행 방식은 Kaggle과 유사하며 RecSys Challenge에서는 비교적 더 큰 데이터셋을 다루게 된다. 토론이 활발히 이루어지는 kaggle과는 달리 팀들간 교류가 거의 발생하지 않는다는 점도 특징이다. 대략 2월 말 주제와 데이터셋이 공개된 뒤 약 3개월간 대회가 진행되는데, 매년 가을 ACM RecSys와 함께 개최되는 Workshop에서 상위권 팀들의 솔루션을 확인할 수 있다. 개인적으로는 학부연구생을 하던 2018년, 인턴쉽을 하고 있는 2020년에 각각 팀장과 팀 멤버로 참가하였고 두 대회 모두 2위로 마무리하였다. 아래에 두 대회에 대한 설명과 팀이 사용했던 모델들을 간단히 정리해 보았다.
-
-![challenge logo](https://hojinYang.github.io/img/recsysc.png)
-
 
 ##  Spotify RecSys Challenge 2018: Automatic Playlist Continuation
 ### 개요
