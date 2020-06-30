@@ -6,7 +6,7 @@ last_modified_at: 2020-06-22T13:00:00+09:00
 author_profile: no
 comments: true
 ---
-추천시스템 분야에 흥미를 느끼고 데이터마이닝 랩에서 학부참여 연구를 하던 시절, 교수님의 소개로 RecSys Challenge에 대해 알게 되었다. 그 뒤로 두 번의 challenge에 참여해 보았는데, 이번 글에서는 대회 소개와 사용했던 모델, 그리고 참가 후기를 간단히 정리해 보았다.
+대학 졸업을 앞둔 4학년 즈음 추천시스템에 흥미를 느끼고 데이터마이닝 랩에서 학부참여 연구를 하던 중, 교수님의 소개로 RecSys Challenge에 대해 접하게 되었다. 그 뒤로 두 번의 challenge에 참여해 보았는데, 이번 글에서는 대회 소개와 사용했던 모델, 그리고 참가 후기를 간단히 정리해 보았다.
 
 ![challenge logo](https://hojinYang.github.io/img/recsysc.png){:.aligncenter}
 
