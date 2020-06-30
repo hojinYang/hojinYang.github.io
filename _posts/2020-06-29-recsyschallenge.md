@@ -50,7 +50,7 @@ Playlist와 song을 각각 user와 item에 대응시켜 CF를 모델링하였다
 
 #### 우승팀
 
-18년 대회의 우승팀은 캐나다의 [Layer6 AI](https://layer6.ai/)이다. 1위팀과 3위팀 모두 우선 CF모델로 후보 음악을 추린 뒤 gradient boosting ensemble을 활용해 rerank하는 2-stage approach를 활용했다. 당시만 해도 GBM에 대해 잘 몰랐기도 했고 대부분의 작업을 혼자해야했기에 이를 시도해볼 시간적 여유가 없었다.  
+18년 대회의 우승팀은 캐나다의 [Layer6 AI](https://layer6.ai/)이다. 1위팀과 3위팀 모두 우선 CF모델로 후보 음악을 추린 뒤 gradient boosting ensemble을 활용해 rerank하는 2-stage approach를 활용했다. 당시만 해도 GBM에 익숙하지 않았을 뿐더러 혼자 이를 시도해볼 시간적/자원적 여유도 없었다. 
 
 
 ##  Twitter RecSys challenge 2020: Tweet Engagement Prediction 
