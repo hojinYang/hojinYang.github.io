@@ -6,7 +6,7 @@ last_modified_at: 2020-06-22T13:00:00+09:00
 author_profile: no
 comments: true
 ---
-대학 졸업을 앞둔 4학년 즈음 추천시스템에 흥미를 느끼고 데이터마이닝 랩에서 학부참여 연구를 하던 중, 교수님의 소개로 RecSys Challenge에 대해 접하게 되었다. 그 뒤로 두 번의 challenge에 참여해 보았는데, 이번 글에서는 대회 소개와 사용했던 모델, 그리고 참가 후기를 간단히 정리해 보았다.
+대학 졸업을 앞둔 4학년 즈음 추천시스템에 흥미를 느끼고 데이터마이닝 랩에서 학부참여 연구를 하던 중, 교수님의 소개로 RecSys Challenge에 대해 접하게 되었다. 그 뒤로 두 번의 challenge에 참여해 보았는데, 이번 글에서는 대회 소개와 사용했던 모델, 그리고 참가 후기를 간단히 정리해 보았다. 
 
 ![challenge logo](https://hojinYang.github.io/img/recsysc.png){:.aligncenter}
 
@@ -21,7 +21,7 @@ ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추
 |2017|Como, Italy|XING|Job|
 |2013|Hong Kong|Yelp|Business|
 
- 대회 진행 방식은 Kaggle과 유사하며 RecSys Challenge에서는 비교적 더 큰 데이터셋을 다루게 된다. 토론이 활발히 이루어지는 kaggle과는 달리 팀간 교류가 거의 발생하지 않는다는 점도 특징이다. 대략 2월 말 주제와 데이터셋이 공개된 뒤 약 3개월간 대회가 진행되는데, 매년 가을 ACM RecSys와 함께 개최되는 Workshop에서 상위권 팀들의 솔루션을 확인할 수 있다. 개인적으로는 학부연구생을 하던 2018년, 인턴쉽을 하고 있는 2020년에 각각 팀장과 팀 멤버로 참가하였고 두 대회 모두 2위로 마무리하였다. 아래에 두 대회에 대한 설명과 팀이 사용했던 모델들을 간단히 정리해 보았다.
+ 대회 진행 방식은 Kaggle과 유사하며 RecSys Challenge에서는 비교적 더 큰 데이터셋을 다루게 된다. 토론이 활발히 이루어지는 kaggle과는 달리 팀간 교류가 거의 발생하지 않는다는 점도 특징이다. 대략 2월 말 주제와 데이터셋이 공개된 뒤 약 3개월간 대회가 진행되는데, 매년 가을 ACM RecSys와 함께 개최되는 Workshop에서 상위권 팀들의 솔루션을 확인할 수 있다. 개인적으로는 학부연구생을 하던 2018년, 인턴쉽을 하고 있는 2020년에 각각 팀장과 팀 멤버로 참가하였고 두 대회 모두 2위로 마무리하였다. 아래에 두 대회에 대한 설명과 팀이 사용했던 모델들을 간단히 정리해 보았다. 두 대회에서 사용한 코드는 [github](https://github.com/hojinYang)에서 확인할 수 있으며, 논문은 [여기](https://hojinYang.github.io/papers/MMCF18.pdf)와 [여기](http://www.cs.toronto.edu/~mvolkovs/recsys2020_challenge.pdf)서 확인할 수 있다. 
 
 ##  Spotify RecSys Challenge 2018: Automatic Playlist Continuation
 ### 개요
@@ -33,6 +33,10 @@ ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추
 ### 모델
 
 우리 팀은 두 하위모델로 구성된 딥러닝 파이프라인을 활용하였는데, Collaborative Filtering(CF) 모델로 Autoencoder를 사용하였고, Character-level CNN을 바탕으로 플레이리스트 제목 기반 예측 모델을 구현하였다. 두 모델에서 얻어진 예측값을 블랜딩하여 최종 추천 곡 목록을 생성했다.  
+
+<figure>
+  <img src="{{ 'assets/images/posts/recsyschallenge1.jpg' | relative_url }}" alt="model 1">
+</figure>
 
 - AutoRec
 
@@ -63,6 +67,10 @@ Playlist와 song을 각각 user와 item에 대응시켜 CF를 모델링하였다
 
 이번 대회에서 우리 팀이 사용한 딥러닝 파이프라인은 다음 세 종류의 입력을 받는다: 1)유저, 작성자, 트윗에서 추출한 features, 2) langugage model을 통해 학습한 트윗 embedding, 3) 유저와 작성자의 트윗 로그(history)를 반영한 user history embedding. 이 값들을 feed-forward network에 입력한 뒤 결과값으로 LIKE, REPLY, RETWEET, COMMENT 등 네가지 engagement의 확률을 계산하도록 학습하였다. 
 
+<figure>
+  <img src="{{ 'assets/images/posts/recsyschallenge2.jpg' | relative_url }}" alt="model 2">
+</figure>
+
 - Feature Engineering
 
  XGBoost를 활용해 다양한 feature engineering/selection을 진행하고 여기서 얻어진 feature들을 DL 파이프라인에 활용하는 방식으로 진행하였다. XGB를 굳이 사용한 이유는 멀티스레드로 동작하는 자바 XGB 파이프라인이 이미 구현되어 있는 상태여서 빠른 속도로 feature들을 테스트 해볼 수 있었기 때문이다. 또한 ordinal, continuous, discrete등 다양한 종류의 feature가 주어졌을 때 정규화 등 추가적인 전처리를 필요로 하는 뉴럴 넷과는 달리 XGB는 이들을 바로 처리할 수 있어 받아 여러모로 시간을 줄여줬다. Feature만 사용했을 때 XGB의 성능은 뉴럴 넷과 거의 비슷하거나 조금 더 좋았는데, language model과 결합했을 때의 성능은 뉴럴 넷이 더 뛰어났다. 
@@ -79,9 +87,7 @@ Playlist와 song을 각각 user와 item에 대응시켜 CF를 모델링하였다
 
 20년 대회의 우승팀은 NVidia의 [Rapids AI](https://rapids.ai/)이다. GPU기반의 data science open source를 개발하는 팀으로, kaggle former no.1인 giba를 비롯 다수의 grandmaster가 팀을 이뤘다. 18년도에는 아쉽게 2위를 차지했다면 20년도 대회는 1위팀과의 격차가 꽤 벌어졌는데, 딥러닝 없이 gradient boosting기반의 모델을 사용한 것으로 보인다. Feature engineering과정에서 target encoding과 frequency encoding을 사용했던 게 주요했다고 [밝혔다](https://twitter.com/tunguz/status/1275116189551865862).    
 
-### 마치며
-
-두 대회에서 사용한 코드는 [github](https://github.com/hojinYang)에서 확인할 수 있다. 몇 가지 느낀점을 정리하며 이번 포스팅을 마친다. 
+### 마치며 
 
 - 모델보다는 데이터 파이프라인
 
