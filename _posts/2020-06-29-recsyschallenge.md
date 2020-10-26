@@ -35,7 +35,7 @@ ACM RecSys Challenge는 음악, SNS, 이커머스 등 다양한 도메인의 추
 우리 팀은 두 하위모델로 구성된 딥러닝 파이프라인을 활용하였는데, Collaborative Filtering(CF) 모델로 Autoencoder를 사용하였고, Character-level CNN을 바탕으로 플레이리스트 제목 기반 예측 모델을 구현하였다. 두 모델에서 얻어진 예측값을 블랜딩하여 최종 추천 곡 목록을 생성했다.  
 
 <figure>
-  <img src="{{ 'assets/images/posts/recsyschallenge1.jpg' | relative_url }}" alt="model 1">
+  <img src="{{ 'assets/images/posts/recsyschallenge1.png' | relative_url }}" alt="model 1">
 </figure>
 
 - AutoRec
@@ -68,7 +68,7 @@ Playlist와 song을 각각 user와 item에 대응시켜 CF를 모델링하였다
 이번 대회에서 우리 팀이 사용한 딥러닝 파이프라인은 다음 세 종류의 입력을 받는다: 1)유저, 작성자, 트윗에서 추출한 features, 2) langugage model을 통해 학습한 트윗 embedding, 3) 유저와 작성자의 트윗 로그(history)를 반영한 user history embedding. 이 값들을 feed-forward network에 입력한 뒤 결과값으로 LIKE, REPLY, RETWEET, COMMENT 등 네가지 engagement의 확률을 계산하도록 학습하였다. 
 
 <figure>
-  <img src="{{ 'assets/images/posts/recsyschallenge2.jpg' | relative_url }}" alt="model 2">
+  <img src="{{ 'assets/images/posts/recsyschallenge2.png' | relative_url }}" alt="model 2">
 </figure>
 
 - Feature Engineering
