@@ -2,3 +2,6 @@
 	path = public
 	url = https://github.com/hojinYang/hojinYang.github.io.git
 	branch = gh-pages
+[submodule "themes/hugo-book"]
+	path = themes/hugo-book
+	url = https://github.com/hojinYang/hugo-book.git
