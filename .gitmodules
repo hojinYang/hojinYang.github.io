@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/hojinYang/hojinYang.github.io.git
+	branch = gh-pages
