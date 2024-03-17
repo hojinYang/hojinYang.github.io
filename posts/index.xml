@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hojin Yang</title>
+    <title>Blog on Hojin Yang</title>
     <link>https://example.org/posts/</link>
-    <description>Recent content in Posts on Hojin Yang</description>
+    <description>Recent content in Blog on Hojin Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Mar 2024 19:40:00 -0500</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://example.org/posts/test/</link>
-      <pubDate>Sat, 16 Mar 2024 19:40:00 -0500</pubDate>
-      <guid>https://example.org/posts/test/</guid>
-      <description>I&amp;rsquo;m documenting my learning note about machine learning on this blog. I&amp;rsquo;m particularly interested in generative models, diffusion models, and recommender systems. Besides, I work as a machine learning research engineer at Haiper, where I train large-scale video generation models. I&amp;rsquo;m also a big fan of film photography and love to travel.</description>
-    </item>
   </channel>
 </rss>

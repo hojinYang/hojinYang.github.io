@@ -6,7 +6,14 @@
     <description>Recent content in Docs on Hojin Yang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Sat, 16 Mar 2024 19:40:00 -0500</lastBuildDate>
     <atom:link href="https://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://example.org/docs/about/</link>
+      <pubDate>Sat, 16 Mar 2024 19:40:00 -0500</pubDate>
+      <guid>https://example.org/docs/about/</guid>
+      <description>Hi! I&amp;rsquo;m documenting my learning note about machine learning on this blog. I&amp;rsquo;m particularly interested in generative models, diffusion models, and recommender systems. Besides, I work as an ML research engineer at Haiper, where I train large-scale video generation models. I&amp;rsquo;m also a big fan of film photography and love to travel.&#xA;Contact: hojin.yang7@gmail.com</description>
+    </item>
   </channel>
 </rss>
