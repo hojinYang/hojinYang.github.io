@@ -1,3 +1,13 @@
 baseURL: https://example.org/
 languageCode: en-us
 title: Hojin Yang
+
+menu:
+  # before: []
+  after:
+    - name: "Github"
+      url: "https://github.com/alex-shpak/hugo-book"
+      weight: 10
+    - name: "Hugo Themes"
+      url: "https://themes.gohugo.io/themes/hugo-book/"
+      weight: 20
