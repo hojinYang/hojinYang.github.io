@@ -5,6 +5,7 @@ params:
   author: Hojin
 title: About
 weight: 10
+type: docs
 ---
 
 I'm documenting my learning note about machine learning on this blog. I'm particularly interested in generative models, diffusion models, and recommender systems. Besides, I work as a machine learning research engineer at [Haiper](https://haiper.ai/), where I train large-scale video generation models. I'm also a big fan of film photography and love to travel.
